@@ -401,6 +401,8 @@ def health():
 
 
 if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5001))
     print("AuditFlow Backend v3 — all 22 bugs fixed")
-    print("Running on http://localhost:5001")
-    app.run(port=5001, debug=False)
+    print(f"Running on port {port}")
+    app.run(host="0.0.0.0", port=port, debug=False)
