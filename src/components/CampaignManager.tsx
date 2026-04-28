@@ -184,11 +184,12 @@ export function CampaignManager() {
       alert('Select at least one country before saving.');
       return;
     }
-    if (editingId) updateCampaign(editingId, form);
-    else addCampaign(form);
-    setShowModal(false);
-  };
-
+if (editingId) {
+  updateCampaign(editingId, form);
+} else {
+  form.lastResetDate = new Date();
+  addCampaign(form);
+}
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <div className="px-6 py-4 flex items-center justify-between flex-shrink-0" style={{ borderBottom: '1px solid var(--border)' }}>
