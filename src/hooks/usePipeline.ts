@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { useEffect, useRef, useCallback } from 'react';
 import { useStore, PipelineStage } from '../store/useStore';
 import { NICHE_ANGLES } from '../data/niches';
