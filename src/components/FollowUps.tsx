@@ -120,7 +120,7 @@ export function FollowUps() {
     }
     // BUG-08 fix: advance status so lead leaves the queue
     updateLead(leadId, {
-      status: 'followed-up',
+      status: 'contacted',
       followUpSentAt: new Date().toISOString(),
       followUpStep: stepIndex + 1,
     });
