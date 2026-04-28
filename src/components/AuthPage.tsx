@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useStore } from '../store/useStore';
 import toast from 'react-hot-toast';
 import { Zap, Mail, Lock, Eye, EyeOff, ArrowRight, Shield } from 'lucide-react';
-import toast from 'react-hot-toast';
 
 export function AuthPage() {
   const [mode, setMode] = useState<'login' | 'signup'>('login');
