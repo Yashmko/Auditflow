@@ -5,7 +5,7 @@ import { NICHE_ANGLES } from '../data/niches';
 
 const sleep = (ms: number) => new Promise<void>(r => setTimeout(r, ms));
 const generateId = () => Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
-const API = (import.meta.env.VITE_API_URL as string) || '/api'; // BUG-03 fixed: use Vite proxy, not hardcoded localhost
+const API = ((import.meta as any).env?.VITE_API_URL as string) || '/api'; // BUG-03 fixed: use Vite proxy, not hardcoded localhost
 
 
 async function checkBackend(): Promise<boolean> {
