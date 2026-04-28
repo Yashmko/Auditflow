@@ -291,7 +291,6 @@ export function usePipeline() {
           dmarc_policy: dnsResult.dmarc_policy,
           sales_angle: angle,
           geminiApiKey: freshSettings.geminiApiKey,
-          emailTemplate: freshCampaignForTemplate?.emailTemplate || '',  // BUG-05/22
           senderName: freshSettings.senderName || 'Independent Infrastructure Auditor',
         });
         report = aiResult.report;
