@@ -50,7 +50,7 @@ export interface Campaign {
   schedule: 'once' | 'daily' | 'weekly';
   sentToday: number;
   totalSent: number;
-  lastResetDate: string;
+  lastResetDate?: string;
   createdAt: string;
 }
 
